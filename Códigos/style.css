@@ -36,6 +36,7 @@
 #foto_perfil{
     width: 100%;
     height: 100%;
+    padding: 10px;
 }
 
 #fotos{
@@ -47,4 +48,18 @@
 #fotos:hover{
     background-color: #eeeeee;
 }
+
+.projetos{
+    padding: 10px;
+    background-color: #FBF37C;
+    min-height: 50px;
+}
+
+#fotos_projeto{
+    padding: 20px;
+    width: 90%;
+    height: 90%;
+}
+
+
 

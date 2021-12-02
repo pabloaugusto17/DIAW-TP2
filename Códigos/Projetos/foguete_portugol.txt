@@ -1,0 +1,121 @@
+programa
+{
+	inclua biblioteca Util --> u
+	funcao inicio()
+	{
+		
+		inteiro altura = 36000 , km , litros 
+
+		//Lendo os dados
+		
+		escreva("Informe os KM/H: ")
+		leia(km)
+		escreva("\nInforme a gasolina: ")
+		escreva("\n--------------------------------------------------")
+		escreva("\nObs: Os pontos serão como se fosse a gasolina, se tivermos 20 pontos de gasolina,")
+		escreva("\no foguete andará o percuso todo, se não ele parará no meio do caminho.")
+		escreva("\n--------------------------------------------------\n")
+		leia(litros)
+		limpa()
+
+		//Variavéis na ajuda da resolução do TP
+		
+		inteiro tempo = altura/km
+		inteiro x = tempo / 20
+		inteiro y = altura / 20
+		inteiro l = 1 , k = 20
+		inteiro multi = 0
+		inteiro erro = 0
+		inteiro vento = u.sorteia(0, 150)
+		inteiro cair = u.sorteia(0,100)
+		inteiro chance = u.sorteia(0, 100)
+		
+		//Formação da órbita
+		
+		para(inteiro cont = 0 ; cont <= 20 ; cont++ ){
+			tempo = x*multi
+			altura = y*multi
+			escreva("_Orbita_        (tempo:",tempo, "s altitude: ",altura,"km gasolina: ",litros,"l vento: ",vento,"km/h)")
+
+			//Desenho
+			
+			para(inteiro i2 = 0 ; i2 < k ; i2++){
+				escreva("\n   .")	
+			}
+			para(inteiro i3 = 0 ; i3 < l ; i3++){
+				escreva("\n   |")}
+
+			//Foguete em Órbita
+			
+				se(altura == 36000){
+					escreva("\nFoguete em Órbita \\O/")
+					pare
+			}
+
+			//Probelmas que podem acontecer
+			
+				//Falta de gasolina
+			
+			se(litros <= 0){
+				gasolina()
+			}
+			
+				//Meteoro bateu no foguete, a chance é de 4 (97,98,99,100) em 100
+			
+			erro = u.sorteia(0, 100)
+			se(erro >= 97){
+				erroA()
+			}
+
+				//Foguete caiu pelo vento e velocidade
+
+			se(cont > 5){
+				se(vento >= 100 e km >= 300)
+					se(cair >= 80)
+						caiu()		
+			}
+
+				//Chance de explodir pela quantidade de gasolina em excesso
+			
+			se(cont > 2 e litros > 50){
+				se(chance >= 80)
+					explodir()
+				
+			}
+			
+				u.aguarde(1000)
+				limpa()
+				multi++
+				l++
+				k--
+				litros--
+				
+		}
+	}
+	funcao gasolina(){
+		escreva("\nAcabou gasolina \\o/")
+		u.aguarde(2000)
+		limpa()
+		inicio()
+		
+	}
+	funcao erroA(){
+		escreva("\nAcidente no foguete por causa de meteoro \\o/")
+		u.aguarde(2000)
+		limpa()
+		inicio()
+		
+	}
+	funcao caiu(){
+		escreva("\nPela sua velocidade e a do vento seu foguete caiu \\o/")
+		u.aguarde(3000)
+		limpa()
+		inicio()
+	}
+	funcao explodir(){
+		escreva("\nO foguete explodiu pelo excesso de gasolina \\o/")
+		u.aguarde(2000)
+		limpa()
+		inicio()
+	}
+}
