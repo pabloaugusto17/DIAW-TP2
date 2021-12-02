@@ -17,12 +17,34 @@
 #input_barra_cima{
     background-color: #000000;
     border-radius: 10px;
-    color: #000000;
+    color: #FFFFFF;
     width: 70%;
     height: 100%;
 }
 
 #input_barra_cima:hover {
     background-color: #FFFFFF;
+    color: #000000;
+}
+
+.perfil{
+    background-color: #FFFFFF;
+    min-height: 300px;
+    margin: 10px;
+}
+
+#foto_perfil{
+    width: 100%;
+    height: 100%;
+}
+
+#fotos{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+#fotos:hover{
+    background-color: #eeeeee;
 }
 
