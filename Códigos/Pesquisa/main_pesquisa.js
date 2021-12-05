@@ -32,8 +32,6 @@ pesquisa.onclick = () => {
 
     let usuario = receber_Usuario(campo_texto.value);
 
-    usuario.then(res => console.log(res));
-
     let nome = document.getElementById('span_nome');
     let bio = document.getElementById('span_bio');
     let seguidores = document.getElementById('span_seguidores');

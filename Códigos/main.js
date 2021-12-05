@@ -26,8 +26,6 @@ function apresenta_informacoes(){
     //Obtido o pefil do usuario no gitHub
     const perfil_usuario = receber_Usuario("pabloaugusto17");
 
-    perfil_usuario.then(res => console.log(res));
-
     //Declarado os ids do nome, descrição, foto de pefil e número de seguidores
     let span = document.getElementById('span_nome');
     let span_des = document.getElementById('span_descricao');
