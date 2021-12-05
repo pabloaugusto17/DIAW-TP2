@@ -59,6 +59,7 @@
 }
 
 #botao_perfil{
+    float: right;
     color: white;
     background-color: black;
 }

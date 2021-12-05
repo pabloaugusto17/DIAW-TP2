@@ -23,6 +23,10 @@ async function receber_Usuario(usuario) {
 let pesquisa = document.getElementById('botao_pesquisa');
 
 pesquisa.onclick = () => {
+
+    document.getElementById('coluna_informacoes').style.display = 'block';
+    document.getElementById('foto_informacoes').style.display = 'block';
+    document.getElementById('botao_informacoes').style.display = 'block';
     
     let campo_texto = document.getElementById('input_barra_cima');
 
@@ -48,9 +52,12 @@ pesquisa.onclick = () => {
     usuario.then(res => seguidores_url.href = res.followers_url);
     usuario.then(res => foto_url.href = res.avatar_url);
 
-    
+}
 
-    
+window.onload = () => {
 
+    document.getElementById('coluna_informacoes').style.display = 'none';
+    document.getElementById('foto_informacoes').style.display = 'none';
+    document.getElementById('botao_informacoes').style.display = 'none';
 
 }

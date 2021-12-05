@@ -27,12 +27,12 @@
     color: #000000;
 }
 
-#botao_pesquisa{
+#botao_pesquisa, #botao_ver_perfil{
     background-color: black;
     color: white;
 }
 
-#botao_pesquisa:hover{
+#botao_pesquisa:hover, #botao_ver_perfil:hover{
     background-color: white;
     color: black;
 }
@@ -47,3 +47,8 @@
     text-decoration: none;
     color: black;
 }
+
+#seguidores_url:hover{
+    color: red;
+}
+
