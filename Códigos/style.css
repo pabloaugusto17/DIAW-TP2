@@ -14,19 +14,6 @@
     color: #FFFFFF;
 }
 
-#input_barra_cima{
-    background-color: #000000;
-    border-radius: 10px;
-    color: #FFFFFF;
-    width: 70%;
-    height: 100%;
-}
-
-#input_barra_cima:hover {
-    background-color: #FFFFFF;
-    color: #000000;
-}
-
 .perfil{
     background-color: #FFFFFF;
     min-height: 300px;

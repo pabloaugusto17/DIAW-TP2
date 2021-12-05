@@ -15,15 +15,10 @@
             <div class = "row">
                 
                 <div class="col-12 col-lg-6 barra_cima">
-                    <a href="">perfil | </a>
-                    <a href="">projetos | </a>
-                    <a href="">experiência | </a>
-                    <a href="">github | </a>
-                    <a href="">conteúdo | </a>
-                </div>
-
-                <div class="col-12 col-lg-6 barra_cima_pesquisa">
-                    <input type="text" placeholder="Pesquise algo" id="input_barra_cima">
+                    <a href="index.html">home page | </a>
+                    <a href="#foto_perfil">perfil | </a>
+                    <a href="#projetos">projetos | </a>
+                    <a href="pesquisa.html">pesquisa github | </a>
                 </div>
 
             </div>
@@ -38,12 +33,13 @@
             <div class= "row">
                 
                 <div class="col-12 col-lg-4">
-                    <img src="Imagens/Foto_Pablo.jpeg" alt="foto_perfil" id="foto_perfil">
+                    <img src="" alt="foto_perfil" id="foto_perfil">
                 </div>
 
                 <div class = "col-12 col-lg-8">
-                    <h4>Pablo Augusto</h4>
-                    <p>Objetivos: Meu objetivo de vida é primeiramente formar na faculdade, obtendo experiência para a área de programação, depois disso quero apenas viver uma vida tranquila, trabalhando e ganhando o suficiente para sobreviver, nada tão ganancioso, apenas uma vida em paz.</p>
+                    <h4><span id="span_nome"></span></h4>
+                    <p><span id="span_descricao"></span></p>
+                    <p>Seguidores: <span id="span_seguidores"></span></p>
                     <br>
                     <br>
                     <h6>Redes Sociais: </h6>
@@ -55,7 +51,7 @@
             </div>
 
             <div class="row projetos">
-                <div class="col-12">
+                <div class="col-12" id="projetos">
                     <h4>Projetos</h4>
                 </div>
             </div>
@@ -95,6 +91,8 @@
     <footer>
 
     </footer>
+
+    <script src="main.js"></script>
     
 </body>
 </html>
