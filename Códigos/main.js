@@ -26,20 +26,35 @@ function apresenta_informacoes(){
     //Obtido o pefil do usuario no gitHub
     const perfil_usuario = receber_Usuario("pabloaugusto17");
 
-    //perfil_usuario.then(res => console.log(res));
+    perfil_usuario.then(res => console.log(res));
 
     //Declarado os ids do nome, descrição, foto de pefil e número de seguidores
     let span = document.getElementById('span_nome');
     let span_des = document.getElementById('span_descricao');
     let imagem_perfil = document.getElementById('foto_perfil');
     let span_seguidores = document.getElementById('span_seguidores');
+    let span_seguindo = document.getElementById('span_seguindo');
+    let span_rep = document.getElementById('span_rep');
+
+    let foto_url = document.getElementById('foto_url');
+    let seguidores_url = document.getElementById('seguidores_url');
+    let seguindo_url = document.getElementById('seguindo_url');
+    let rep_url = document.getElementById('rep_url');
+    let url_pefil = document.getElementById('url_perfil');
 
     //Atribuído os valores
     perfil_usuario.then(res => span.innerHTML = res.name);
     perfil_usuario.then(res => span_des.innerHTML = res.bio);
     perfil_usuario.then(res => imagem_perfil.src = res.avatar_url);   
     perfil_usuario.then(res => span_seguidores.innerHTML = res.followers);
-    
+    perfil_usuario.then(res => span_seguindo.innerHTML = res.following);    
+    perfil_usuario.then(res => span_rep.innerHTML = res.public_repos);
+
+    perfil_usuario.then(res => foto_url.href = res.avatar_url);
+    perfil_usuario.then(res => seguidores_url.href = res.followers_url);
+    perfil_usuario.then(res => seguindo_url.href = res.following_url);
+    perfil_usuario.then(res => rep_url.href = res.repos_url);
+    perfil_usuario.then(res => url_pefil.href = res.html_url);    
 
     
 }

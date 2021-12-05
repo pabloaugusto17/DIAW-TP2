@@ -48,5 +48,25 @@
     height: 90%;
 }
 
+#seguidores_url, #seguindo_url, #rep_url{
+    color: black;
+    text-decoration: none;
+}
+
+#seguidores_url:hover, #seguindo_url:hover, #rep_url:hover{
+    color: red;
+    
+}
+
+#botao_perfil{
+    color: white;
+    background-color: black;
+}
+
+#botao_perfil:hover{
+    color: black;
+    background-color: white;
+}
+
 
 
